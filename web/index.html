@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/[hydro-dash]/">
 
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="水動力 Pro - 你的專屬飲水提醒助手">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="水動力 Pro">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <title>水動力 Pro</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <script src="flutter.js" defer></script>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // 下載所有 Flutter 資源並啟動 App
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
